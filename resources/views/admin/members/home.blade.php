@@ -30,7 +30,6 @@
                   }
               });
             });
-
             $('#loanapplicationlist').DataTable({            
                lengthMenu: [[10, 25, 50, -1], [10, 25, 50, "All"]],
                 ajax: '/admin/loanapplicationpostsdata',
@@ -134,14 +133,11 @@
                       $("#totalinterest").val(data.totalinterest);
                       $("#totalamount").val(data.totalamount);
                       $("#monthlyamort").val(data.monthlyamort);
-
                     },
                     error: function(data){
-
                     }
                   });
             });
-
             setInterval(function(){
                 $('.datatable-selection-single').DataTable().ajax.reload();
               },10000);
@@ -149,6 +145,8 @@
     </script>
 
 @endsection
+
+<!-- comments for jones -->
 
 @section('content')
 
